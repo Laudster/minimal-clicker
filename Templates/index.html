@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   
     <title>Money Printer!</title>
-</style>
+
 </head>
 <body>
     <h1>Money Printer!</h1>
     <div id="interface" style="display: none;">
         <p>Money: <span id="money-count">0</span></p>
-        <div id="printer"><button id="printer-button" onclick="print_money()" id="print-button">Print money!</button></div>
-        <br>
+        <button id="printer-button" onclick="print_money()" id="print-button">Print money!</button>
+        
         <div id="upgrades">
             {% for i in range(0, 8, 2) %}
                 <button class="upgrade" id="{{ i }}" onclick="click_upgrade(this.id)">
@@ -27,7 +27,7 @@
                 <br>
             {% endfor %}
         </div>
-        <div id="save-button"><button onclick="saveGame()">Save Game</button></div>
+        <button id="save-button" onclick="saveGame()">Save Game</button>
     </div>
 </body>
 </html>
