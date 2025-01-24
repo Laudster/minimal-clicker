@@ -17,23 +17,15 @@
         <div id="printer"><button id="printer-button" onclick="print_money()" id="print-button">Print money!</button></div>
         <br>
         <div id="upgrades">
-            <button class="upgrade" id ="0" onclick="click_upgrade(this.id)" > Upgrade manual printer: <span id="price1">0</span> money </button>
-            <button class="upgrade" id="1" onclick="automatic_upgrade(this.id)" > Get automatic printer: <span id="price2">0</span> money </button>
-            <br>
-            
-            <button class="upgrade" id ="2" onclick="click_upgrade(this.id)" > Upgrade manual printer: <span id="price3">0</span> money </button>
-            
-            <button class="upgrade" id="3" onclick="automatic_upgrade(this.id)" > Get automatic printer: <span id="price4">0</span> money </button>
-            <br>
-            
-            <button class="upgrade" id ="4" onclick="click_upgrade(this.id)" > Upgrade manual printer: <span id="price5">0</span> money </button>
-            
-            <button class="upgrade" id="5" onclick="automatic_upgrade(this.id)" > Get automatic printer: <span id="price6">0</span> money </button>
-            <br>
-            
-            <button class="upgrade" id ="6" onclick="click_upgrade(this.id)" > Upgrade manual printer: <span id="price7">0</span> money </button>
-            
-            <button class="upgrade" id="7" onclick="automatic_upgrade(this.id)" > Get automatic printer: <span id="price8">0</span> money </button>
+            {% for i in range(0, 8, 2) %}
+                <button class="upgrade" id="{{ i }}" onclick="click_upgrade(this.id)">
+                    Upgrade manual printer: <span id="price{{ i + 1 }}">0</span> money
+                </button>
+                <button class="upgrade" id="{{ i + 1 }}" onclick="automatic_upgrade(this.id)">
+                    Get automatic printer: <span id="price{{ i + 2 }}">0</span> money
+                </button>
+                <br>
+            {% endfor %}
         </div>
         <div id="save-button"><button onclick="saveGame()">Save Game</button></div>
     </div>
