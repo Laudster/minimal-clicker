@@ -1,0 +1,27 @@
+h1{
+    text-align: center;
+}
+p{
+    text-align: center;
+    font-size: 200%;
+    margin-top: 5%;
+}
+#printer{
+    text-align: center;
+}
+#printer-button{
+    padding: 0.3%;
+    font-size: 110%;
+    margin-bottom: 5%;
+}
+.upgrade{
+    width: 20%;
+    font-size: large;
+}
+#upgrades{
+    text-align: center;
+}
+#save-button{
+    position: absolute;
+    top: 95%;
+}
