@@ -1,7 +1,7 @@
 var socket = io.connect(window.location.origin);
 
 let money, money_per_print, money_per_second, prices;
-const upgrades = [0.2, 1, 1, 2.5, 3, 5, 6, 10, 1, 1, 1]; // En smart løsning som jeg ikke husker hvordan funker
+const upgrades = [0.2, 1, 1, 2.5, 3, 5, 6, 10]; // En smart løsning, litt rotete
 
 window.onload = function loadGame() {
     socket.emit("load-game", function(data){
